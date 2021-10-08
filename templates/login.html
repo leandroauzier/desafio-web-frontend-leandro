@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Login</title>
+    {% endblock title %}
+</head>
+<body>
+
+    {% block conteudo %}
+    <div class="container-fluid cont-login">
+            <div class="main-login">
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <img src="static/images/algoritme.png" alt="Algoritme logo" width="300px" height=" 67.22px ;">
+                </div>
+                <form method="post" id="form">
+                  <div class="form-group">
+                    <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+                    <small id="emailHelp" class="form-text text-muted">Seus dados não serão divulgados a ninguém.</small>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Sua senha">
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                </form>
+            </div>
+    </div>
+    {% endblock conteudo %}
+
+</body>
+</html>

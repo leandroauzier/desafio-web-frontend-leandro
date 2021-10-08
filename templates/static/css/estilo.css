@@ -1,0 +1,12 @@
+.main-login{
+    background-color: #FFFFFF;
+    max-width: 350px;
+    margin: 5% auto auto auto;
+    padding: 0px 20px 40px 20px;
+    border-radius: 20px;
+    border: solid 2px #4D4796;
+    box-shadow: 5px 10px 10px black;
+}
+#form{
+    padding-top: 25px
+}
