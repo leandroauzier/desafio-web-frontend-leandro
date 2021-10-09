@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+        <title>Sessão Finalizada!</title>
+    <script>
+        function logout(){
+        alert("Sessão Finalizada!!! Faça o login novamente e entre de novo!")
+        }
+    </script>
+    {% endblock title %}
+
+
+</head>
+<body>
+
+    {% block conteudo %}
+        <input type="button" onclick="logout()" value="Exibir Alerta">
+
+    <div class="container-fluid cont-login">
+            <div class="main-login">
+                <p align="center">Sessão Finalizada! Volte sempre, estaremos esperando por você!</p>
+            </div>
+    </div>
+    {% endblock conteudo %}
+
+</body>
+</html>
