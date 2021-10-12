@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+    {% block title %}
+        <title>Sessão Finalizada!</title>
+    <script>
+        function logout(){
+        alert("Sessão Finalizada!!! Faça o login novamente e entre de novo!")
+        }
+    </script>
+    {% endblock title %}
+
+    {% block conteudo %}
+        <div class="container-fluid cont-login">
+                <div class="main-login">
+                    <p align="center">Você realmente deseja sair?</p>
+                    <form method="post" action="{% url 'account_logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-lg">Sair</button>
+                    </form>
+                </div>
+        </div>
+    {% endblock conteudo %}

@@ -4,17 +4,25 @@
 <html lang="pt-br">
 
 <head>
+
   {% block title %}
+    <title>Algoritme</title>
   {% endblock title %}
-  <title>Algoritme</title>
 
   {% include 'parciais/head.html' %}
-  <link rel="stylesheet" href="static/css/estilo.css">
+  <link rel="stylesheet" href="/static/css/estilo.css">
 
 </head>
 
+  {% block body %}
 <body style="background-color: #7D5AA3">
-  {% include 'parciais/nav.html' %}
+  {% endblock body %}
+  <header>
+    {% block nav %}
+      {% include 'parciais/nav.html' %}
+    {% endblock nav %}
+  </header>
+
 
   {% block H1 %}
   {% endblock H1 %}
@@ -34,5 +42,4 @@
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
-
 </html>

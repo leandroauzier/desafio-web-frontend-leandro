@@ -38,7 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'core',
+    'bootstrap4',
+    # allauth
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -127,3 +135,23 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# django-allauth
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
+LOGIN_REDIRECT_URL = '/profile'        # Redireciona para home
+ACCOUNT_SESSION_REMEMBER = True                 # Remove o 'Lembrar-me'
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False     # Só precisa digitar a senha uma vez
+ACCOUNT_USERNAME_REQUIRED = False               # Não precisa de username
+ACCOUNT_AUTHENTICATION_METHOD = "email"         # Método de autenticação: email
+ACCOUNT_EMAIL_REQUIRED = True                   # Email obrigatório
+ACCOUNT_UNIQUE_EMAIL = True                     # Email único
+
+# django-crispy-forms
+CRISPY_TEMPLATES_PACK = "bootstrap4"

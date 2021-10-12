@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+<head>
+    {% block title %}
+        <title>Entrar</title>
+    {% endblock title %}
+</head>
+    {% block conteudo %}
+    <div class="container-fluid cont-login">
+            <div class="main-login">
+                <br>
+                <div class="row d-flex justify-content-center">
+                    <img src="/static/images/algoritme.png" alt="Algoritme logo" width="300px" height=" 67.22px ;">
+                </div>
+
+                <form method="post" id="form" action="">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                  <div class="form-group">
+                     <!-- <input type="username" name="username" class="form-control form-control-lg" placeholder="Usuário">
+                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Senha">
+                      <small class="texto-link-senha form-text text-muted">Esqueceu a senha?</small> -->
+                    {% buttons %}
+                  <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                    {% endbuttons %}
+                  </div>
+                </form>
+            </div>
+    </div>
+    {% endblock conteudo %}
