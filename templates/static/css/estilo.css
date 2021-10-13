@@ -1,12 +1,95 @@
 .main-login{
     background-color: #FFFFFF;
-    max-width: 350px;
-    margin: 10% auto auto auto;
+    max-width: 450px;
+    margin: 10px auto auto auto;
     padding: 20px 20px 40px 20px;
     border-radius: 20px;
     border: solid 2px #4D4796;
     box-shadow: 5px 10px 10px black;
 }
+.main-tabela{
+    background-color: #FFFFFF;
+    max-width: 850px;
+    margin: 10px auto auto auto;
+    padding: 20px 20px 40px 20px;
+    border-radius: 20px;
+    border: solid 2px #4D4796;
+    box-shadow: 5px 10px 10px black;
+}
+.main-center{
+    max-width: 500px;
+    margin: auto auto auto auto;
+    border-radius: 20px;
+}
+
+.carousel{
+    z-index: -99;
+     height: 400px;
+     width: 600px;
+     position: fixed;
+ }
+
 #form{
     padding-top: 25px
+}
+
+#texticulo{
+    background-color: #C5AFFD;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+#saudacao{
+    color: white;
+    padding: 20px 0px 20px 40px;
+}
+
+#controls{
+    max-width: 300px;
+}
+
+#manchete{
+    z-index: 2;
+    margin-top: 20px;
+    margin-left: 20px;
+    text-align: justify;
+    font-family: 'Oswald', sans-serif;
+}
+
+p{
+    font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+article{
+    display: flex;
+    max-width: 450px;
+    max-height: 361px;
+    padding: 0 50px;
+    flex-direction: column;
+}
+
+footer{
+    color:white;
+    padding: 20px 5px;
+    background-color: #203024;
+    width: 100%;
+    background-attachment: scroll;
+    position: fixed;
+    bottom: 0;
+    margin:auto;
+}
+#tabela{
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 0px 30px 40px 30px;
+    box-shadow: 5px 10px 10px black;
+    margin-bottom: 100px;
+    margin-top:50px;
+}
+
+h6, h3, h1{
+    font-family: Lucida Bright, Century Regular;
 }

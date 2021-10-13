@@ -4,22 +4,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="login">Home <span class="sr-only">(current)</span></a>
+        <a href="/"><img src="/static/images/algoritme.png" alt="Algoritme logo" width="200px" height=" 44.67px ;"></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <ul class="navbar-nav mr-auto">
          {% if user.is_authenticated %}
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_logout' %}">Sair</a>
+              <a class="nav-link" href="{% url 'core:profile' %}">Minha página</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'core:logout_user' %}">Sair</a>
           </li>
           {% else %}
           <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_login' %}">Entrar</a>
+              <a class="nav-link" href="{% url 'core:login_user' %}">Login</a>
           </li>
-          <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}">Cadastro</a>
-          </li>
+<!--          <li class="nav-item">-->
+<!--              <a class="nav-link" href="">Cadastro</a>-->
+<!--          </li>-->
         {% endif %}
       </ul>
     </form>

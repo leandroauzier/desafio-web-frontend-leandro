@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<div class="container-fluid cont-login">
+    <form method="post" id="tabela" autocomplete="off">
+        <h3 style="text-align: center">Adicionar um usuário</h3>
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Nome</label>
+            {{ form.nome }}
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Telefone</label>
+            {{ form.telefone }}
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Data de nascimento</label>
+            {{ form.data_nascimento }}
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Renda</label>
+            {{ form.renda }}
+        </div>
+        <div class="form-check">
+            <label class="form-check-label" for="flexCheckChecked">Ativo
+            </label>
+            {{ form.status }}
+        </div>
+        <!--        {{ form }}-->
+        <br>
+
+        <button type="submit" class="btn btn-success btn-sm btn block">
+            Confirmar
+        </button>
+        <a type="button" href="{% url 'core:profile'%}" class="btn btn-secondary btn-sm btn block">
+            Cancelar
+        </a>
+    </form>
+</div>
+{% endblock conteudo %}

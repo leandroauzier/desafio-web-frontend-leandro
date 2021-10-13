@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
-{% load crispy_forms_tags %}
+<!--{% load crispy_forms_tags %}-->
 {% load static %}
 
 <head>
@@ -16,15 +16,17 @@
                     <img src="/static/images/algoritme.png" alt="Algoritme logo" width="300px" height=" 67.22px ;">
                 </div>
 
-                <form method="post" id="form" action="">
+                <form method="post" id="form" action="?next={{ redirect_to }}">
                     {% csrf_token %}
-                    {{ form|crispy }}
+<!--                    {{ form|crispy }}-->
                   <div class="form-group">
-                     <!-- <input type="username" name="username" class="form-control form-control-lg" placeholder="Usuário">
-                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Senha">
-                      <small class="texto-link-senha form-text text-muted">Esqueceu a senha?</small> -->
+                     <input type="text" name="username" class="form-control form-control-lg" placeholder="Usuário" autocomplete="off">
+                      <br>
+                      <input type="password" name="password" class="form-control form-control-lg" placeholder="Senha" autocomplete="off">
+<!--                      <small class="texto-link-senha form-text text-muted">Esqueceu a senha?</small>-->
+                      <br>
                     {% buttons %}
-                  <button style="margin-top: 10px;" type="submit" class="btn btn-primary btn-lg btn-block">Entrar</button>
+                  <button style="margin-top: 10px;" type="submit" class="btn btn-success btn-lg btn-block">Entrar</button>
                     {% endbuttons %}
                   </div>
                 </form>

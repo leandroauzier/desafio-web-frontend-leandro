@@ -1,12 +1,14 @@
+{% block footer %}
 <br>
-<footer style="color:white; padding: 20px 5px">
-    <div class="container">
+<footer>
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
             <div class="footer-conteudo float-center text-center">
-                <p>© Copyright 2021 Algoritme - Todos os direitos reservados</p>
+                <p style="text-align: center;">© Copyright {%now "Y"%} Algoritme - Todos os direitos reservados</p>
             </div>
         </div>
       </div>
     </div>
 </footer>
+{% endblock footer %}

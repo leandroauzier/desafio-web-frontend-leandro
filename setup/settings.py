@@ -142,8 +142,10 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+#AUTH_USER_MODEL = "core.User"
+
 SITE_ID = 1
-LOGIN_REDIRECT_URL = '/profile'        # Redireciona para home
+LOGIN_REDIRECT_URL = '/accounts/login'                        # Redireciona para home
 ACCOUNT_SESSION_REMEMBER = True                 # Remove o 'Lembrar-me'
 
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
